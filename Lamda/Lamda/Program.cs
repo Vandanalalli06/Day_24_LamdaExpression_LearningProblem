@@ -33,3 +33,12 @@ double averageAge = listPersonInCity.Average(e => e.Age);
 {
     Console.WriteLine("The Average Of All The Person's Age Is: {0}", averageAge);
 }
+
+//UC5
+Console.WriteLine("\n______________________________________");
+Console.WriteLine("checking personn name present in the list");
+foreach (CreatePerson person in listPersonInCity.FindAll(e => e.Name == "sriya"))
+{
+    Console.WriteLine("Yes,Name exist in your list");
+}
+
