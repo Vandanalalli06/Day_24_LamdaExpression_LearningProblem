@@ -41,4 +41,11 @@ foreach (CreatePerson person in listPersonInCity.FindAll(e => e.Name == "sriya")
 {
     Console.WriteLine("Yes,Name exist in your list");
 }
-
+//Uc-6
+Console.WriteLine("\n______________________________________");
+Console.WriteLine("\nSkkiping every persons whose aged is less than 60 years");
+foreach (CreatePerson person in listPersonInCity.FindAll(e => e.Age < 60))
+{
+    //Console.WriteLine("Name:" + person.Name + "\t\tAge:" + person.Age);
+    Console.WriteLine("Name: {0} \n Age: {1}", person.Name, person.Age);
+}
