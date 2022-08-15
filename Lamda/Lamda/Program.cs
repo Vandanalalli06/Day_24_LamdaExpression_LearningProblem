@@ -7,10 +7,11 @@ listPersonInCity.Add(new CreatePerson("488-94-9884", "geetha", "Akgila residency
 listPersonInCity.Add(new CreatePerson("933-64-9684", "sneha", "Priya residency 7 street", 18));
 listPersonInCity.Add(new CreatePerson("928-65-4647", "navya", "Geetha residency 7 street", 89));
 listPersonInCity.Add(new CreatePerson("953-74-5474", "gopal", "TTD residency 7 street", 14));
-listPersonInCity.Add(new CreatePerson("235-36-3774", "varshu", "Cv residency 7 street", 55));
+listPersonInCity.Add(new CreatePerson("235-36-3774", "varshu", "Cv residency 7 street", 65));
 listPersonInCity.Add(new CreatePerson("464-74-7677", "sriya", "Aditya residency 7 street", 38));
 
 //UC-2
+Console.WriteLine("\n______________________________________");
 Console.WriteLine("Retrieving Top Two Aged persons From List Who Are Older Than 60 Years: ");
 foreach (CreatePerson person in listPersonInCity.FindAll(e => (e.Age >= 60)).Take(2).ToList())
 {
@@ -18,8 +19,17 @@ foreach (CreatePerson person in listPersonInCity.FindAll(e => (e.Age >= 60)).Tak
 }
 
 //UC-3
+Console.WriteLine("\n______________________________________");
 Console.WriteLine("Checking Whether any person is teen ager or not: ");
 foreach (CreatePerson person in listPersonInCity.FindAll(e => (e.Age >= 13 && e.Age <= 18)))
 {
     Console.WriteLine("Name: {0} \n Age: {1}", person.Name, person.Age);
+}
+
+//UC4
+Console.WriteLine("\n______________________________________");
+Console.WriteLine("Getting Average Of All The Person's Age: ");
+double averageAge = listPersonInCity.Average(e => e.Age);
+{
+    Console.WriteLine("The Average Of All The Person's Age Is: {0}", averageAge);
 }
