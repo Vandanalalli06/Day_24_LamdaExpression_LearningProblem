@@ -14,7 +14,7 @@ namespace Lamda
         public int Age;
         public CreatePerson(string ssn, string name, string address, int age)
         {
-            SSN = ssn;//Sub System Number
+            SSN = ssn;//Social security number
             Name = name;
             Address = address;
             Age = age;
